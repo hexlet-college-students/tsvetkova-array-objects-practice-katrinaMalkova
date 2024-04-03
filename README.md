@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/U0VZ_sIm)
 # Описание репозитория:
 Это тренировочная практика для отработки навыков работы с массивами и объектами. Добро пожаловать в мир агрегации и анализа :) Надеюсь, вам ~~не~~ понравится.
 
