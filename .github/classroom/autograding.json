@@ -1,0 +1,204 @@
+{
+    "tests": [
+      {
+        "name": "Task 1 Messengers",
+        "setup": "npm install",
+        "run": "npm test -- __tests__/index.test.js -t 'Task 1 - Messengers Step 1'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 0.5
+      },
+      {
+        "name": "Task 1 Messengers",
+        "setup": "npm install",
+        "run": "npm test -- __tests__/index.test.js -t 'Task 1 - Messengers Step 2'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 0.5
+      },
+      {
+        "name": "Task 1 Messengers",
+        "setup": "npm install",
+        "run": "npm test -- __tests__/index.test.js -t 'Task 1 - Messengers Step 3'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 0.5
+      },
+      {
+        "name": "Task 1 Messengers",
+        "setup": "npm install",
+        "run": "npm test -- __tests__/index.test.js -t 'Task 1 - Messengers Step 4'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 0.5
+      },
+      {
+        "name": "Task 1 Messengers",
+        "setup": "npm install",
+        "run": "npm test -- __tests__/index.test.js -t 'Task 1 - Messengers Step 5'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 0.5
+      },
+      {
+        "name": "Task 2 - Job resume",
+        "setup": "npm install",
+        "run": "npm test -- __tests__/index.test.js -t 'Task 2 - Job resume Step 1'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 0.5
+      },
+      {
+        "name": "Task 2 - Job resume",
+        "setup": "npm install",
+        "run": "npm test -- __tests__/index.test.js -t 'Task 2 - Job resume Step 2'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 0.5
+      },
+      {
+        "name": "Task 2 - Job resume",
+        "setup": "npm install",
+        "run": "npm test -- __tests__/index.test.js -t 'Task 2 - Job resume Step 3'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 0.5
+      },
+      {
+        "name": "Task 2 - Job resume",
+        "setup": "npm install",
+        "run": "npm test -- __tests__/index.test.js -t 'Task 2 - Job resume Step 4'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 0.5
+      },
+      {
+        "name": "Task 2 - Job resume",
+        "setup": "npm install",
+        "run": "npm test -- __tests__/index.test.js -t 'Task 2 - Job resume Step 5'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 0.5
+      },
+      {
+        "name": "Task 3 - Actor rating Nicolas Cage",
+        "setup": "npm install",
+        "run": "npm test -- __tests__/index.test.js -t 'Task 3 - Actor rating Nicolas Cage Step 1'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 0.5
+      },
+      {
+        "name": "Task 3 - Actor rating Nicolas Cage",
+        "setup": "npm install",
+        "run": "npm test -- __tests__/index.test.js -t 'Task 3 - Actor rating Nicolas Cage Step 2'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 0.5
+      },
+      {
+        "name": "Task 3 - Actor rating Nicolas Cage",
+        "setup": "npm install",
+        "run": "npm test -- __tests__/index.test.js -t 'Task 3 - Actor rating Nicolas Cage Step 3'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 0.5
+      },
+      {
+        "name": "Task 3 - Actor rating Nicolas Cage",
+        "setup": "npm install",
+        "run": "npm test -- __tests__/index.test.js -t 'Task 3 - Actor rating Nicolas Cage Step 4'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 0.5
+      },
+      {
+        "name": "Task 3 - Actor rating Nicolas Cage",
+        "setup": "npm install",
+        "run": "npm test -- __tests__/index.test.js -t 'Task 3 - Actor rating Nicolas Cage Step 5'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 0.5
+      },
+      {
+        "name": "Task 3 - Actor rating Leonardo DiCaprio",
+        "setup": "npm install",
+        "run": "npm test -- __tests__/index.test.js -t 'Task 3 - Actor rating Leonardo DiCaprio Step 1'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 0.5
+      },
+      {
+        "name": "Task 3 - Actor rating Leonardo DiCaprio",
+        "setup": "npm install",
+        "run": "npm test -- __tests__/index.test.js -t 'Task 3 - Actor rating Leonardo DiCaprio Step 2'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 0.5
+      },
+      {
+        "name": "Task 3 - Actor rating Leonardo DiCaprio",
+        "setup": "npm install",
+        "run": "npm test -- __tests__/index.test.js -t 'Task 3 - Actor rating Leonardo DiCaprio Step 3'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 0.5
+      },
+      {
+        "name": "Task 3 - Actor rating Leonardo DiCaprio",
+        "setup": "npm install",
+        "run": "npm test -- __tests__/index.test.js -t 'Task 3 - Actor rating Leonardo DiCaprio Step 4'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 0.5
+      },
+      {
+        "name": "Task 3 - Actor rating Leonardo DiCaprio",
+        "setup": "npm install",
+        "run": "npm test -- __tests__/index.test.js -t 'Task 3 - Actor rating Leonardo DiCaprio Step 5'",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 2,
+        "points": 0.5
+      }
+    ]
+  }

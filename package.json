@@ -1,0 +1,32 @@
+{
+  "name": "array-aggregation",
+  "version": "1.0.0",
+  "description": "Это тренировочная практика для отработки навыков работы с массивами и объектами. Добро пожаловать в мир агрегации и анализа :) Надеюсь, вам ~~не~~ понравится.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "messengers": "bin/messengers.js",
+    "job-resume": "bin/job-resume.js",
+    "actors": "bin/actors.js"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.24.0",
+    "babel-jest": "^29.7.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  },
+  "babel": {
+    "presets": ["@babel/preset-env"]
+  }
+}
