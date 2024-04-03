@@ -1,31 +1,241 @@
-name: Classroom workflow
-
-on:
-  push:
-    branches:
-      - main
-
+name: Autograding Tests
+'on':
+- push
+- workflow_dispatch
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
 jobs:
-  classroom:
+  run-autograding-tests:
     runs-on: ubuntu-latest
-
+    if: github.actor != 'github-classroom[bot]'
     steps:
-    - name: Check out repository
-      uses: actions/checkout@v3
-
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Task 1 - Messengers Step 1
+      id: task-1-messengers-step-1
+      uses: education/autograding-command-grader@v1
       with:
-        node-version: '20'
-
-    - name: Install dependencies
-      run: make install
-
-    - name: Run lint
-      run: make lint
-
-    - name: Run tests
-      run: make test
-      
-    - uses: education/autograding@v1
-
+        test-name: Task 1 - Messengers Step 1
+        setup-command: npm install
+        command: npm test -- __tests__/index.test.js -t 'Task 1 - Messengers Step
+          1'
+        timeout: 2
+        max-score: 1
+    - name: Task 1 - Messengers Step 2
+      id: task-1-messengers-step-2
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Task 1 - Messengers Step 2
+        setup-command: npm install
+        command: npm test -- __tests__/index.test.js -t 'Task 1 - Messengers Step
+          2'
+        timeout: 2
+        max-score: 1
+    - name: Task 1 - Messengers Step 3
+      id: task-1-messengers-step-3
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Task 1 - Messengers Step 3
+        setup-command: npm install
+        command: npm test -- __tests__/index.test.js -t 'Task 1 - Messengers Step
+          3'
+        timeout: 2
+        max-score: 1
+    - name: Task 1 - Messengers Step 4
+      id: task-1-messengers-step-4
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Task 1 - Messengers Step 4
+        setup-command: npm install
+        command: npm test -- __tests__/index.test.js -t 'Task 1 - Messengers Step
+          4'
+        timeout: 2
+        max-score: 1
+    - name: Task 1 - Messengers Step 5
+      id: task-1-messengers-step-5
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Task 1 - Messengers Step 5
+        setup-command: npm install
+        command: npm test -- __tests__/index.test.js -t 'Task 1 - Messengers Step
+          5'
+        timeout: 2
+        max-score: 1
+    - name: Task 2 - Job resume Step 1
+      id: task-2-job-resume-step-1
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Task 2 - Job resume Step 1
+        setup-command: npm install
+        command: npm test -- __tests__/index.test.js -t 'Task 2 - Job resume Step
+          1'
+        timeout: 2
+        max-score: 1
+    - name: Task 2 - Job resume Step 2
+      id: task-2-job-resume-step-2
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Task 2 - Job resume Step 2
+        setup-command: npm install
+        command: npm test -- __tests__/index.test.js -t 'Task 2 - Job resume Step
+          2'
+        timeout: 2
+        max-score: 1
+    - name: Task 2 - Job resume Step 3
+      id: task-2-job-resume-step-3
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Task 2 - Job resume Step 3
+        setup-command: npm install
+        command: npm test -- __tests__/index.test.js -t 'Task 2 - Job resume Step
+          3'
+        timeout: 2
+        max-score: 1
+    - name: Task 2 - Job resume Step 4
+      id: task-2-job-resume-step-4
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Task 2 - Job resume Step 4
+        setup-command: npm install
+        command: npm test -- __tests__/index.test.js -t 'Task 2 - Job resume Step
+          4'
+        timeout: 2
+        max-score: 1
+    - name: Task 2 - Job resume Step 5
+      id: task-2-job-resume-step-5
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Task 2 - Job resume Step 5
+        setup-command: npm install
+        command: npm test -- __tests__/index.test.js -t 'Task 2 - Job resume Step
+          5'
+        timeout: 2
+        max-score: 1
+    - name: Task 3 - Actor rating Nicolas Cage Step 1
+      id: task-3-actor-rating-nicolas-cage-step-1
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Task 3 - Actor rating Nicolas Cage Step 1
+        setup-command: npm install
+        command: npm test -- __tests__/index.test.js -t 'Task 3 - Actor rating Nicolas
+          Cage Step 1'
+        timeout: 2
+        max-score: 1
+    - name: Task 3 - Actor rating Nicolas Cage Step 2
+      id: task-3-actor-rating-nicolas-cage-step-2
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Task 3 - Actor rating Nicolas Cage Step 2
+        setup-command: npm install
+        command: npm test -- __tests__/index.test.js -t 'Task 3 - Actor rating Nicolas
+          Cage Step 2'
+        timeout: 2
+        max-score: 1
+    - name: Task 3 - Actor rating Nicolas Cage Step 3
+      id: task-3-actor-rating-nicolas-cage-step-3
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Task 3 - Actor rating Nicolas Cage Step 3
+        setup-command: npm install
+        command: npm test -- __tests__/index.test.js -t 'Task 3 - Actor rating Nicolas
+          Cage Step 3'
+        timeout: 2
+        max-score: 1
+    - name: Task 3 - Actor rating Nicolas Cage Step 4
+      id: task-3-actor-rating-nicolas-cage-step-4
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Task 3 - Actor rating Nicolas Cage Step 4
+        setup-command: npm install
+        command: npm test -- __tests__/index.test.js -t 'Task 3 - Actor rating Nicolas
+          Cage Step 4'
+        timeout: 2
+        max-score: 1
+    - name: Task 3 - Actor rating Nicolas Cage Step 5
+      id: task-3-actor-rating-nicolas-cage-step-5
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Task 3 - Actor rating Nicolas Cage Step 5
+        setup-command: npm install
+        command: npm test -- __tests__/index.test.js -t 'Task 3 - Actor rating Nicolas
+          Cage Step 5'
+        timeout: 2
+        max-score: 1
+    - name: Task 3 - Actor rating Leonardo DiCaprio Step 1
+      id: task-3-actor-rating-leonardo-dicaprio-step-1
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Task 3 - Actor rating Leonardo DiCaprio Step 1
+        setup-command: npm install
+        command: npm test -- __tests__/index.test.js -t 'Task 3 - Actor rating Leonardo
+          DiCaprio Step 1'
+        timeout: 2
+        max-score: 1
+    - name: Task 3 - Actor rating Leonardo DiCaprio Step 2
+      id: task-3-actor-rating-leonardo-dicaprio-step-2
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Task 3 - Actor rating Leonardo DiCaprio Step 2
+        setup-command: npm install
+        command: npm test -- __tests__/index.test.js -t 'Task 3 - Actor rating Leonardo
+          DiCaprio Step 2'
+        timeout: 2
+        max-score: 1
+    - name: Task 3 - Actor rating Leonardo DiCaprio Step 3
+      id: task-3-actor-rating-leonardo-dicaprio-step-3
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Task 3 - Actor rating Leonardo DiCaprio Step 3
+        setup-command: npm install
+        command: npm test -- __tests__/index.test.js -t 'Task 3 - Actor rating Leonardo
+          DiCaprio Step 3'
+        timeout: 2
+        max-score: 1
+    - name: Task 3 - Actor rating Leonardo DiCaprio Step 4
+      id: task-3-actor-rating-leonardo-dicaprio-step-4
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Task 3 - Actor rating Leonardo DiCaprio Step 4
+        setup-command: npm install
+        command: npm test -- __tests__/index.test.js -t 'Task 3 - Actor rating Leonardo
+          DiCaprio Step 4'
+        timeout: 2
+        max-score: 1
+    - name: Task 3 - Actor rating Leonardo DiCaprio Step 5
+      id: task-3-actor-rating-leonardo-dicaprio-step-5
+      uses: education/autograding-command-grader@v1
+      with:
+        test-name: Task 3 - Actor rating Leonardo DiCaprio Step 5
+        setup-command: npm install
+        command: npm test -- __tests__/index.test.js -t 'Task 3 - Actor rating Leonardo
+          DiCaprio Step 5'
+        timeout: 2
+        max-score: 1
+    - name: Autograding Reporter
+      uses: education/autograding-grading-reporter@v1
+      env:
+        TASK-1-MESSENGERS-STEP-1_RESULTS: "${{steps.task-1-messengers-step-1.outputs.result}}"
+        TASK-1-MESSENGERS-STEP-2_RESULTS: "${{steps.task-1-messengers-step-2.outputs.result}}"
+        TASK-1-MESSENGERS-STEP-3_RESULTS: "${{steps.task-1-messengers-step-3.outputs.result}}"
+        TASK-1-MESSENGERS-STEP-4_RESULTS: "${{steps.task-1-messengers-step-4.outputs.result}}"
+        TASK-1-MESSENGERS-STEP-5_RESULTS: "${{steps.task-1-messengers-step-5.outputs.result}}"
+        TASK-2-JOB-RESUME-STEP-1_RESULTS: "${{steps.task-2-job-resume-step-1.outputs.result}}"
+        TASK-2-JOB-RESUME-STEP-2_RESULTS: "${{steps.task-2-job-resume-step-2.outputs.result}}"
+        TASK-2-JOB-RESUME-STEP-3_RESULTS: "${{steps.task-2-job-resume-step-3.outputs.result}}"
+        TASK-2-JOB-RESUME-STEP-4_RESULTS: "${{steps.task-2-job-resume-step-4.outputs.result}}"
+        TASK-2-JOB-RESUME-STEP-5_RESULTS: "${{steps.task-2-job-resume-step-5.outputs.result}}"
+        TASK-3-ACTOR-RATING-NICOLAS-CAGE-STEP-1_RESULTS: "${{steps.task-3-actor-rating-nicolas-cage-step-1.outputs.result}}"
+        TASK-3-ACTOR-RATING-NICOLAS-CAGE-STEP-2_RESULTS: "${{steps.task-3-actor-rating-nicolas-cage-step-2.outputs.result}}"
+        TASK-3-ACTOR-RATING-NICOLAS-CAGE-STEP-3_RESULTS: "${{steps.task-3-actor-rating-nicolas-cage-step-3.outputs.result}}"
+        TASK-3-ACTOR-RATING-NICOLAS-CAGE-STEP-4_RESULTS: "${{steps.task-3-actor-rating-nicolas-cage-step-4.outputs.result}}"
+        TASK-3-ACTOR-RATING-NICOLAS-CAGE-STEP-5_RESULTS: "${{steps.task-3-actor-rating-nicolas-cage-step-5.outputs.result}}"
+        TASK-3-ACTOR-RATING-LEONARDO-DICAPRIO-STEP-1_RESULTS: "${{steps.task-3-actor-rating-leonardo-dicaprio-step-1.outputs.result}}"
+        TASK-3-ACTOR-RATING-LEONARDO-DICAPRIO-STEP-2_RESULTS: "${{steps.task-3-actor-rating-leonardo-dicaprio-step-2.outputs.result}}"
+        TASK-3-ACTOR-RATING-LEONARDO-DICAPRIO-STEP-3_RESULTS: "${{steps.task-3-actor-rating-leonardo-dicaprio-step-3.outputs.result}}"
+        TASK-3-ACTOR-RATING-LEONARDO-DICAPRIO-STEP-4_RESULTS: "${{steps.task-3-actor-rating-leonardo-dicaprio-step-4.outputs.result}}"
+        TASK-3-ACTOR-RATING-LEONARDO-DICAPRIO-STEP-5_RESULTS: "${{steps.task-3-actor-rating-leonardo-dicaprio-step-5.outputs.result}}"
+      with:
+        runners: task-1-messengers-step-1,task-1-messengers-step-2,task-1-messengers-step-3,task-1-messengers-step-4,task-1-messengers-step-5,task-2-job-resume-step-1,task-2-job-resume-step-2,task-2-job-resume-step-3,task-2-job-resume-step-4,task-2-job-resume-step-5,task-3-actor-rating-nicolas-cage-step-1,task-3-actor-rating-nicolas-cage-step-2,task-3-actor-rating-nicolas-cage-step-3,task-3-actor-rating-nicolas-cage-step-4,task-3-actor-rating-nicolas-cage-step-5,task-3-actor-rating-leonardo-dicaprio-step-1,task-3-actor-rating-leonardo-dicaprio-step-2,task-3-actor-rating-leonardo-dicaprio-step-3,task-3-actor-rating-leonardo-dicaprio-step-4,task-3-actor-rating-leonardo-dicaprio-step-5
