@@ -1,0 +1,24 @@
+name: Run tests
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+
+    - name: Install dependencies
+      run: make install
+    
+    - name: Check linter
+      run: make lint
+
+    - name: Run tests
+      run: make test
+
+    - name: Calculate test score
+      run: echo ::set-output name=points::'{"points": 0.5}'
