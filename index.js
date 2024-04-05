@@ -34,7 +34,28 @@ const findMaxAndMinIndiaRaiting = (data) => {
 }; // выясняет минимум и максимум скачиваний
 
 // task 1.3
-// const getAustraliaRaiting = (str) => parseInt(str.split(';').at(5), 10);
+function topThreeAust(data) {
+  const appsData = data.map((str) => {
+    const appInfo = str.split(';');
+    const name = appInfo.at(0);
+    const DownlInAustralia = parseInt(str.split(';').at(5), 10);
+    return { name, DownlInAustralia };
+  });
+
+  const compare = (a, b) => {
+    if (a.DownlInAustralia > b.DownlInAustralia) {
+      return -1;
+    } if (a.DownlInAustralia === b.DownlInAustralia) {
+      return 0;
+    }
+    return 1;
+  };
+
+  const name1 = appsData.sort(compare);
+  const getThirstThree = name1.slice(0, 3);
+  const appNames = getThirstThree.map((app) => app.name).sort().join(', ');
+  return `Top-3 Australia: ${appNames}`;
+}
 
 // task 1.4
 
@@ -50,7 +71,7 @@ const tableParsing = (content) => {
   const [maxCount, minCount] = findMaxAndMinIndiaRaiting(data);
   console.log(`Download count: Max count: ${maxCount}, Min count: ${minCount}`);
   // 1.3
-
+  console.log(topThreeAust(data));
   // 1.4
 
   // 1.5
