@@ -34,6 +34,7 @@ const findMaxAndMinIndiaRaiting = (data) => {
 }; // выясняет минимум и максимум скачиваний
 
 // task 1.3
+// const getAustraliaRaiting = (str) => parseInt(str.split(';').at(5), 10);
 
 // task 1.4
 

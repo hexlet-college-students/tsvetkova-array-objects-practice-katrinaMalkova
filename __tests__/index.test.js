@@ -29,7 +29,7 @@ describe('Task 1 - Messengers', () => {
     expect(q3).toEqual('Top-3 Australia: Facebook Messenger, Telegram, WhatsApp');
   });
   test('Step 4', () => {
-    expect(q4).toEqual('Top downloads: WhatsApp, Facebook Messenger, Telegram, Signal, Viber, Snapchat, WeChat, LINE');
+    expect(q4).toEqual('Top downloads: Signal, LINE, WeChat, Viber, Telegram, Snapchat, Facebook Messenger, WhatsApp');
   });
   test('Step 5', () => {
     expect(q5).toEqual('Top owner: Meta Platforms Inc.');
