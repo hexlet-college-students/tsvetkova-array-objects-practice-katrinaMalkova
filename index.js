@@ -61,7 +61,7 @@ function topThreeAust(data) {
 // task 1.4
 // нужно рассчитать среднее количество скачиваний для каждого приложения и
 // отсортировать их в порядке возрастания
-const WorstToTop = (Data) => {
+const Top3Down = (Data) => {
   const calculateAverageDownloads = (downloads) => {
     const totalDownloads = downloads.reduce((acc, curr) => acc + parseInt(curr, 10), 0);
     return totalDownloads / downloads.length;
@@ -75,8 +75,23 @@ const WorstToTop = (Data) => {
   const appNames = apps.map((app) => app.name).join(', ');
   return appNames;
 };
-
 // task 1.5
+const findTwoPlusApps = (data) => {
+  const companies = data.reduce((acc, app) => {
+    const company = app.split(';')[1];
+    if (acc[company]) {
+      acc[company] += 1;
+    } else {
+      acc[company] = 1;
+    }
+    return acc;
+  }, {});
+  const result = Object.entries(companies)
+    .filter(([, counter]) => counter >= 2)
+    .map(([company]) => company);
+
+  return result.join(', ');
+};
 
 // task 1
 const tableParsing = (content) => {
@@ -90,9 +105,11 @@ const tableParsing = (content) => {
   // 1.3
   console.log(topThreeAust(data));
   // 1.4
-  const worsttotop = WorstToTop(data);
+  const worsttotop = Top3Down(data);
   console.log(`Top downloads: ${worsttotop}`);
   // 1.5
+  const CompaniesWithTwoPlusleApps = findTwoPlusApps(data);
+  console.log(`Top owner: ${CompaniesWithTwoPlusleApps}`);
 };
 // task 2
 const candidateAssessment = (/* content */) => {
