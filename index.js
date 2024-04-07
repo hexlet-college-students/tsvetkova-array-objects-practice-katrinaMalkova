@@ -10,6 +10,8 @@ const getDevOfCompany = (str) => str.split(';').at(1);
 const getPlayMarketRating = (str) => parseFloat(str.split(';').at(2), 10);
 const getAppStoreRating = (str) => parseFloat(str.split(';').at(3), 10);
 
+const getIndiaRaiting = (str) => parseInt(str.split(';').at(6), 10);
+
 // Вычисляет среднее значение рейтингов приложения из Play Market и App Store
 const averageRating = (str) => (getAppStoreRating(str) + getPlayMarketRating(str)) / 2;
 
@@ -26,7 +28,6 @@ const getMaxAvRating = (data) => {
 };
 
 // task 1.2
-const getIndiaRaiting = (str) => parseInt(str.split(';').at(6), 10);
 
 const findMaxAndMinIndiaRaiting = (data) => {
   const downloads = data.map((str) => getIndiaRaiting(str));
@@ -58,6 +59,22 @@ function topThreeAust(data) {
 }
 
 // task 1.4
+// нужно рассчитать среднее количество скачиваний для каждого приложения и
+// отсортировать их в порядке возрастания
+const WorstToTop = (Data) => {
+  const calculateAverageDownloads = (downloads) => {
+    const totalDownloads = downloads.reduce((acc, curr) => acc + parseInt(curr, 10), 0);
+    return totalDownloads / downloads.length;
+  };
+
+  const apps = Data.map((appData) => {
+    const [name, , , , ...downloads] = appData.split(';');
+    const averageDownloads = calculateAverageDownloads(downloads);
+    return { name, averageDownloads };
+  }).sort((a, b) => a.averageDownloads - b.averageDownloads);
+  const appNames = apps.map((app) => app.name).join(', ');
+  return appNames;
+};
 
 // task 1.5
 
@@ -73,10 +90,10 @@ const tableParsing = (content) => {
   // 1.3
   console.log(topThreeAust(data));
   // 1.4
-
+  const worsttotop = WorstToTop(data);
+  console.log(`Top downloads: ${worsttotop}`);
   // 1.5
 };
-
 // task 2
 const candidateAssessment = (/* content */) => {
 
