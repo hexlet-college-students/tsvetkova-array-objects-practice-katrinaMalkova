@@ -42,6 +42,8 @@ function topThreeAust(data) {
     const DownlInAustralia = parseInt(str.split(';').at(5), 10);
     return { name, DownlInAustralia };
   });
+  // преобразует каждую строку данных в объект с именем приложения
+  // и количеством загрузок в Австралии
 
   const compare = (a, b) => {
     if (a.DownlInAustralia > b.DownlInAustralia) {
@@ -51,11 +53,15 @@ function topThreeAust(data) {
     }
     return 1;
   };
+  // пределяет функцию сравнения compare,
+  // которая используется для сортировки объектов в массиве appsData
 
   const name1 = appsData.sort(compare);
   const getThirstThree = name1.slice(0, 3);
   const appNames = getThirstThree.map((app) => app.name).sort().join(', ');
   return `Top-3 Australia: ${appNames}`;
+  // использует функцию sort с функцией сравнения compare
+  // для сортировки массива appsData по убыванию количества загрузок в Австралии
 }
 
 // task 1.4
@@ -66,7 +72,7 @@ const Top3Down = (Data) => {
     const totalDownloads = downloads.reduce((acc, curr) => acc + parseInt(curr, 10), 0);
     return totalDownloads / downloads.length;
   };
-
+  // функция, которая принимает массив скачиваний и вычисляет среднее значение скачиваний
   const apps = Data.map((appData) => {
     const [name, , , , ...downloads] = appData.split(';');
     const averageDownloads = calculateAverageDownloads(downloads);
@@ -74,7 +80,11 @@ const Top3Down = (Data) => {
   }).sort((a, b) => a.averageDownloads - b.averageDownloads);
   const appNames = apps.map((app) => app.name).join(', ');
   return appNames;
-};
+}; // приобразовываем каждый элемент массива Data в объект с именем
+// приложения и средним количеством скачиваний,
+// Сортирует полученный массив объектов по убыванию среднего количества скачиваний.
+// Возвращаем строку
+
 // task 1.5
 const findTwoPlusApps = (data) => {
   const companies = data.reduce((acc, app) => {
@@ -86,12 +96,19 @@ const findTwoPlusApps = (data) => {
     }
     return acc;
   }, {});
+  // метод reduce для создания объекта companies, где ключом является имя разработчика,
+  // а значением - количество приложений этого разработчика в массиве data.
+  // Если приложение от данного разработчика встречается впервые, значение увеличивается на единицу,
+  // иначе - суммируется
   const result = Object.entries(companies)
     .filter(([, counter]) => counter >= 2)
     .map(([company]) => company);
-
+  // Использует метод filter для выбора тех пар ключ-значение
+  // из объекта companies, где значение больше или равно двум.
+  // метод map для создания нового массива,
+  // содержащего имена разработчиков, которые имеют два и более приложения
   return result.join(', ');
-};
+}; // Возвращает строку, полученную путем объединения имен разработчиков через запятую и пробел.
 
 // task 1
 const tableParsing = (content) => {
